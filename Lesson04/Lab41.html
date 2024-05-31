@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab4.1</title>
+        <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;           
+        }
+      .nav1 {
+        display: flex;
+      }
+      .nav1 li{
+         padding: 1rem;
+         list-style: none;
+         font-weight: bold;
+         background-color: rgb(49, 48, 48);
+         color: #fff;
+         position: relative;
+      }
+      .nav2{
+        display: none;
+        position: absolute;
+        width: 15rem;
+      }
+      .nav1 li:hover{
+        color: rgb(3, 117, 28);
+      }
+      .nav1 li:hover .nav2{
+        display: block;
+      }
+    </style>
+    </head>
+    <body>
+        <nav>
+            <ul class="nav1">
+                <li>Trang chủ</li>
+                <li>Sản phẩm
+                    <ul class="nav2">
+                        <li>CSS3</li>
+                        <li>HTML5</li>
+                        <li>PHP</li>
+                    </ul>
+                </li>
+                <li>Dịch vụ</li>
+                <li>Giới thiệu</li>
+                <li>Liên hệ</li>
+            </ul>
+        </nav>
+    </body>
+</html>

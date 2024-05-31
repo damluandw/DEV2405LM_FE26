@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .div1{
+            position: relative;
+            border: 4px red solid;
+            width: 40rem;
+            height: 40rem;
+        }
+        .div2{
+            position: absolute;
+            border: 4px blue solid;
+            width: 20rem;
+            height: 20rem;
+            left: 60px;
+            top: 30%;
+        }
+        .div3{
+            position: absolute;
+            border: 4px yellow solid;
+            width: 10rem;
+            height: 10rem;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, 50%);
+        }
+        /* .div4{
+            position: fixed;
+            border: 4px black solid;
+            width: 10rem;
+            height: 10rem;
+            left: 20px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+            <div class="div3">
+                <!-- <div class="div4">
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

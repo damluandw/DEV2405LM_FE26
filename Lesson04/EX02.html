@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cú pháp CSS</title>
+    <style>
+        /*CSS tương tác với tên thẻ HTML */
+        h2{
+            color: blue;
+        }
+        /* CSS tương tác với ID của thẻ HTML */
+        #cssID{
+            color: red;
+        }
+        /* CSS tương tác với class của thẻ HTML */
+        .cssClass{
+            color: chocolate;
+        }
+        /* CSS tương tác với tên thuộc tính */
+        input[type="text"]{
+            background-color: rgb(11, 11, 109);
+        }
+        /* tag01 tag02 */   
+        #demo2 p{
+            background-color: #ccc;
+            color: blue;
+        }
+        /* tag01,tag02 */
+         h2,div{
+            background-color: rgb(161, 228, 5);
+        }
+        /* tag01 + tag02 */
+       #demo4 p + div{
+            background-color: blueviolet;
+        }
+          /* tag01>tag02 */
+        #demo5>h5{
+            border: solid 2px black;
+        }
+        /* After and before */
+        #demo5>h5::after{
+            content: "after";
+            border: solid 2px #ccc;
+        }
+        /* Hover */
+        ul li:hover{
+            color: blue;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS với tên thẻ HTML -->
+    <h2>CSS với tên thẻ HTML</h2>
+    <!-- CSS tương tác với ID của thẻ HTML  -->
+    <h2 id="cssID">CSS tương tác với ID của thẻ HTML</h2>
+    <!-- CSS tương tác với class của thẻ HTML -->
+    <h2 class="cssClass">CSS tương tác với class của thẻ HTML</h2>
+    <!-- CSS tương tác với tên thuộc tính -->
+    <input type="text" >
+    <br>
+    <input type="text" >
+    <br>
+    <input type="password" >
+    <br>
+    <section id="demo2">
+        <h2>Tag01 Tag02</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, modi exercitationem iste velit perspiciatis qui beatae vitae enim reiciendis eligendi at voluptate, quod ut in eius consectetur! Officiis, sed ducimus.</p>
+        <div id="demo3">
+            <h3>Tag01 Tag02</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis eos id eum, maxime eligendi eaque minus nam excepturi et unde. Qui, dolore? Doloribus vitae accusantium deleniti quae consectetur asperiores.</p>
+        </div>
+    </section>
+    <section id="demo4">
+        <h4 class="h3">tag01 +tag02</h4>
+        <div class="noidung">
+            <span>Noi dung 0</span>
+        </div>
+        <p>Noi dung 1</p>
+        <p>Noi dung 2</p>
+        <p>Noi dung 3</p>
+        <div class="noidung">
+            <span>Noi dung 4</span>
+        </div>
+    </section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt esse, eum eligendi veniam nam molestiae quisquam, dolores laborum omnis est quia repudiandae nisi maxime aliquam vero culpa reprehenderit officia tempora!</p>
+    <section id="demo5">
+        <h5>tag01>tag02</h5>
+        <div>
+            <h5>tag01>tag02</h5>            
+        </div>
+    </section>
+    <nav>
+        <ul>
+            <li>Trang chủ</li>
+            <li>Giới thiệu</li>
+            <li>Sản phẩm</li>
+            <li>Liên hệ</li>
+            <li>Tin tức</li>
+        </ul>
+    </nav>
+</body>
+</html>
