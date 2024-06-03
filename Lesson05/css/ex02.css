@@ -1,0 +1,64 @@
+*{
+   padding: 0;
+   margin: 0;
+   font-size: 20px;
+}
+
+li{
+    list-style: none;
+    padding: 1rem;
+}
+a{
+    text-decoration: none;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Đơn vị rem
+   nếu font-size =20px =>  1rem = 20px; 
+    nếu font-size =100px => 1rem = 100px
+
+ */
+ /* Đơn vị em
+   nếu font-size =20px thẻ cha 16px =>  1em = 16px; 
+    nếu font-size =100px => 1rem = 100px
+
+ */
+.font-sz-rem{
+    font-size: 1rem;
+}
+.font-sz-em{
+    font-size: 1em;
+}
+.font-sz-100{
+    font-size: 100px;
+}
+ 
+#nav {
+    background-color: red;
+}
+
+#nav li a{
+    color:#fff;
+}
+
+
+#nav li:hover{
+    background-color: black;
+}
+
+#nav{
+   position: fixed;
+   width: 100%;
+   top: 0;
+}
+
+#box-1{
+    margin-top: 4rem;
+}
+.m-1{
+    margin: 1rem;
+}
