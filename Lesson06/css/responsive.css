@@ -1,0 +1,25 @@
+/* 
+@media screen and (min-width: 400px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    body {
+      background-color: blue;
+    }
+  } */
+
+
+  @media screen and (max-width: 400px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .col-25{
+        width: 30%;
+    }
+  }
