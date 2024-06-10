@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vòng lặp</title>
+    </head>
+    <body>
+        <h1>Vòng lặp</h1>
+        <script>
+        // Vòng lặp for
+        // for(giá trị khởi đầu;câu lệnh điều kiện; bước nhảy)
+        // nếu 
+        // for đầy đủ
+        // for(var i=0; i<10;i++){
+        //     document.write(i);
+        // }
+        // for khuyết        
+        // for(var i=0;i<5;){
+        //     i++;
+        //     document.write("<div>"+i+"</div>")
+        // }
+
+
+        // Vòng lặp While
+        // while(điều kiện){
+        // khối lệnh thực thi
+        //}
+        // sẽ thực thi khối lệnh khi điều kiện đúng
+        var number = 0 ;
+        // document.write("<div> Demo vòng lặp While</div>")
+        // while(number < 5){
+        //     document.write("<div>"+number+"</div>")
+        //     number++;
+        // }
+
+        
+        document.write("<h3> Demo vòng lặp While Khác Do while</h3>")
+        number =1;
+        document.write("<h4> while</h4>")
+        while(number ==0){
+            document.write("<div>"+number+"</div>")
+            number++;
+        }
+
+        // do while
+        // do {
+        // Khối lệnh thực thi
+        //}
+        // while(điều kiện)
+        number = 1 ;
+        document.write("<h4> do while</h4>")
+        do{
+            document.write("<div>"+number+"</div>")
+            number++;
+        }while(number ==0)
+
+        // for in
+        document.write("<h4>Demo for in</h4>")
+        // Khai báo object
+        // var tên biến = { 
+        //'key': 'giá trị',
+        // 'key': 'giá trị',...
+        //}
+        var obj={
+            'name': 'DevMaster',
+            'age': 25,
+        }
+        // list object
+        var listObj=[{
+            'name': 'DevMaster',
+            'age': 25,
+        },{
+            'name1': 'DevMaster',
+            'age1': 25,
+        }
+    ]
+
+
+        for (item in obj) {
+            // console.log(item+ ": " + obj[name])
+            document.write("<div>"+item+ ": " + obj[item]+"</div>")
+        }
+   
+        
+
+    </script>
+    </body>
+</html>

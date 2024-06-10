@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Câu lệnh rẽ nhánh</title>
+    </head>
+    <body>
+        <script>
+        //  Câu lệnh điều kiện
+        //if
+        if(5>3){
+            document.write("<div>5 lớn hơn là Đúng</div>")
+        }
+
+        // if else
+        if(10<3){
+            document.write("<div>10 nhỏ hơn 3 là Đúng</div>")
+        }else{
+            document.write("<div>10 lớn hơn 3 là Đúng</div>")
+        }
+
+        // if {} if else{}
+        if(10<3){
+            document.write("<div>10 nhỏ hơn 3 là Đúng</div>")
+        }else if(10>3){
+            document.write("<div>10 lớn hơn 3 là Đúng</div>")
+        }
+
+        // if {} if else{} if else{}.... else{}
+        var number1 = 10, number2 = 17;
+        if(number1 >number2){
+            document.write("<div> number1 lớn hơn number2 </div>")
+        }else if(number1 == number2){
+            document.write("<div> number1 bằng number2 </div>")
+        }else{
+            document.write("<div> number1 nhỏ hơn number2 </div>")
+        }
+
+        // if lồng nhau
+        // lấy số lớn hơn chia cho số nhỏ hơn nếu bằng nhau thì lấy số 2 chia số 1;
+        if(number1> number2){
+            if(number2!=0){
+                document.write("<div> number1 chia number2: "+ number1/number2+" </div>")
+            }else{
+                document.write("<div> number2 bằng 0 </div>")
+            }            
+        }else {
+            if(number1!=0){
+                document.write("<div> number2 chia number1: "+ number2/number1+" </div>")
+            }else{
+                document.write("<div> number1 bằng 0 </div>")
+            } 
+        } 
+
+        //&& (AND)
+        //
+        if(number1> number2 && number2!=0){
+            document.write("<div> number1 chia number2: "+ number1/number2+" </div>")                      
+        }else if(number1 <= number2 && number1!=0){
+            document.write("<div> number2 chia number1: "+ number2/number1+" </div>")
+        }
+        else{
+            document.write("<div> number2 hoặc number1 bằng 0 </div>")
+        }
+        // || (OR)
+        // cho hai số nếu số 1 lớn hơn số 2 hoặc số 2 là số âm thì in ra màn hình đáp án đúng
+        // ngược lại thì in màn hình đáp án sai
+        number2 =-2;
+        number1 =-4;
+        if(number1 > number2 || number2 <0){
+            document.write("<div> đáp án đúng </div>")
+        }else{
+            document.write("<div> đáp án sai </div>")
+        }
+
+        // ! (NOT)
+        if(!number1 >number2){ // tương đương if( number1 <number2)
+            document.write("<div> đúng </div>")
+        }else{
+            document.write("<div> sai </div>")
+        }
+
+        // switch case
+        var soNgay =8;
+        // switch (biến){
+        // case *giá trị : nếu đúng câu lệnh sẽ được thực thi
+        // break;
+        // default:
+        //      câu lệnh sẽ được thực thi
+        //      break;
+        //}
+        //
+        switch(soNgay){
+            // so sánh biến và giá trị => nếu bằng nhau thì nó sẽ 
+            case 1: 
+                document.write("<div> Chủ nhật </div>");
+                // break;
+            case 2: 
+                document.write("<div> Thứ 2 </div>");
+                // break;
+            case 3: 
+                document.write("<div> Thứ 3 </div>");
+                break;
+            case 4: 
+                document.write("<div> Thứ 4 </div>");
+                break;
+            case 5: 
+                document.write("<div> Thứ 5 </div>");
+                break;
+            case 6: 
+                document.write("<div> Thứ 6 </div>");
+                break;
+            case 7: 
+                document.write("<div> Thứ 7 </div>");
+                break;
+            default: 
+                document.write("<div> Không thuộc ngày nào trong tuần </div>");
+                break;
+        }
+             
+      
+    </script>
+    </body>
+</html>

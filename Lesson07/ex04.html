@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Toán tử, toán hạng - So sánh</title>
+    </head>
+    <body>
+        <script>
+         var a = 10;
+         var b =3;
+        // Phép cộng
+        console.log("phép cộng:", a+b);
+        // phép trừ
+        console.log("phép trừ:", a-b);
+        // phép nhân
+        console.log("phép nhân:", a*b);
+        //phép chia
+        console.log("phép chia:", a/b);
+        //phép chia lấy dư
+        console.log("chia lấy dư:", a%b);
+        // cộng 1 đơn vị 
+        a++;
+         console.log("cộng 1 đơn vị:", a);
+         // trừ 1 đơn vị 
+         a--;
+         console.log("trừ 1 đơn vị:", a);
+
+        // Các phép so sánh
+        // so sánh == 
+        var number1 = 1;
+        var number2 = 3;
+        var number3 = '1';
+
+        console.log("so sánh ==", number1 == number2 );
+        console.log("so sánh ==", number1 == number3 );
+
+        // so sánh ===
+        console.log("so sánh === ",number1 === number2);
+        console.log("so sánh === ",number1 === number3);
+
+
+        // Toán tử gán
+        var number = 6;
+        // number cộng thêm 4 đơn vị
+         number+=4; //number = number +4;
+         document.write("<div> Số number cộng thêm 4 đơn vị: "+number+"</div>");
+         number = number +4;
+         document.write("<div> Số number cộng thêm 4 đơn vị: "+number+"</div>");
+
+         // number trừ thêm 3 đơn vị
+         number-=3; //number = number - 3;
+         document.write("<div> Số number trừ 3 đơn vị: "+number+"</div>");
+
+
+        // number nhân với 2
+        number*=3;//number = number *3;
+         document.write("<div> Số number nhân với 3: "+number+"</div>");
+
+        // number chia với 2
+        number/=2; // number = number / 2;
+         document.write("<div> Số number chia với 2: "+number+"</div>");
+
+
+        // number chia lấy dư với 3
+        number =11;
+        number%=3; // number = number % 3;
+         document.write("<div> Số number chia lấy dư với 3: "+number+"</div>");
+
+
+
+         // Toán tử đặc biệt 
+         // () ? :
+         // Trong ngoặc là phép so sánh trả về giá trị true hoặc false
+         // sau dấu ? là giá trị được trả về nếu đúng
+         // sau dấu : là giá trị được trả về nếu sai
+         (6<3)?  document.write("đúng"): document.write("sai")
+
+         // Typeof()
+        // Trả về kiểu dữ liệu
+         document.write("<div> Kiểu dữ liệu: "+typeof(null)+"</div>")
+    </script>
+    </body>
+</html>
