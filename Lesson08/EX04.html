@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // Object
+        // Systax:
+        // Khai báo với từ new
+         var obj = new Object();
+         obj.name ="admin";
+         obj.password ="1234566";
+
+         var obj1 = new Object({
+            name: "admin1",
+            password : "12345"
+         });
+        //  Khai báo vơi ngoặc xoắn
+        var obj2 ={};
+        obj2.name ="admin2";
+        obj2.password ="1234566";
+
+        
+        var obj3 = { name: "admin3", password: "12345"};
+
+
+        // Làm việc với Object
+        // Lấy giá trị trong object
+        // Systax: object.tên_thuộc_tính
+        document.write("name: ",obj.name);
+        document.write(" || password: ",obj.password);
+
+
+        var obj4 = {
+            userName : "DevMater",
+            password : "12345",
+            thongTinChiTiet: {
+                diaChi: "25 Vũ Ngọc Phan",
+                tuoi: 23,
+                trangThai: true
+            },
+            arr: [
+                {
+                    id: 1,
+                    thongTin1: "id 1 thong tin1 ",
+                    
+                },
+                {
+                    id: 2,
+                    thongTin1: "id 1 thong tin1 ",
+                },
+            ],
+            
+        }
+        document.write(" || dia chi: ",obj4.thongTinChiTiet.diaChi);
+        document.write(" || thongTin1: ",obj4.arr[0].thongTin1);
+
+    </script>
+</body>
+</html>

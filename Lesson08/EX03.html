@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+    </head>
+    <body>
+        <h1 class="text-center">Thực hành với DOM</h1>
+        <div>            
+            <label for="name">UserName</label>
+            <input class="input-name" type="text" name="name" id="userName">
+            <div id="HienThiUser"></div>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <button onclick="getUser()">Lấy dữ liệu</button>
+        </div>
+
+        <script>
+      
+        function getUser(){
+            // DOM tương tác với thẻ HTML thông qua ID
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+            // document.getElementById("HienThiUser").innerHTML("User: ")
+
+            console.log("userName",userName);
+            console.log("password",password);
+
+            // DOM tương tác với thẻ HTML tagName
+            var tagName = document.getElementsByTagName("h1");
+            console.log("length tagName ",tagName);
+
+
+            // DOM tương tác với thẻ HTML thông qua className
+            var className = document.getElementsByClassName("input-name");
+            console.log("className",className);
+
+            // DOM tương tác theo cú pháp Selector
+            var selector = document.querySelectorAll("div input.input-name");
+            console.log("selector",selector);
+        }
+       
+    </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hàm</title>
+    </head>
+    <body>
+        <script>
+        // Hàm
+        // Systax:
+        //  function tên_hàm (tham_số_truyền_vào)
+        // {
+        //  lệnh/ khối lệnh thực thi
+        //  return giá_trị_trả_về  => có thể có hoặc không
+        //}
+        //  tham_số_truyền_vào có thể có hoặc không
+        // giải phương trình bậc 1 có dạng ax+b=0
+        function ptb1(a,b){
+            if(a== 0){
+                if(b==0){
+                    document.write("<div>Với a = ", a, " và b = ", b," Phương trình có vô số nghiệm</div>")
+                }else{
+                    document.write("<div>Với a = ", a, " và b = ", b," Phương trình  vô số nghiệm</div>")
+                }
+            }else{
+                document.write("<div>Với a = ", a, " và b = ", b," Phương trình có nghiệm: " ,-b/a ,"</div>")
+            }
+        }
+
+        ptb1(3,6);
+        ptb1(0,6);
+        ptb1(0,0);
+
+        arr = ["How","are","you","doing", "today?"]
+    </script>
+    </body>
+</html>

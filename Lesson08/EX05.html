@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Một số hàm</title>
+    </head>
+    <body>
+        <script>
+        var number = 1.555
+
+        document.write("parseInt(number): ", parseInt(number) )
+
+        document.write("<br/>parseFloat(number): ", parseFloat(number) )
+        
+        number += 444;
+        console.log("number: ", number)
+
+        // gán lại
+        number = 1.555
+        var number2 = number.toString();
+        number2 += 444;
+        console.log("<br/>number2.ToString(): ", number2)       
+
+
+        // Date
+        var date = new Date();
+        document.write("<br/>date: ", date.get() )
+    </script>
+    </body>
+</html>

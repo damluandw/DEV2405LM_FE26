@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập sử dụng JavaScript</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            width: 18rem;
+            margin: 0.5rem auto ;
+        }
+        .box-remember{
+            justify-content: flex-start;
+        }
+        .box-button{
+            justify-content: flex-end;
+        }
+        button{
+            margin-left: 4rem;
+            background-color: rgb(97, 97, 247);
+            border: none;
+            border-radius: 0.25rem;
+        }
+        .cl-red{
+            color: red;
+        }
+        .d-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   <form action="post">
+     <h2>Đăng nhập</h2>
+     <div class="box">
+        <label for="userName">User Name</label>
+        <input type="text" name="userName" id="userName">
+        
+     </div>
+     <!-- cách 1 -->
+     <!-- <div class="box">
+        <span  id="errorName"></span>
+     </div> -->
+     <!-- cách 2 -->
+     <div class="box">
+        <span  id="errorName" class="cl-red d-none">Vui lòng không bỏ trống User Name</span>
+     </div>
+     <div  class="box">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+     </div>
+     <div class="box">
+        <span id="errorPassword"></span>
+     </div>
+     <div class="box box-remember">
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember">Remember</label>
+        
+     </div>
+     <div  class="box box-button">
+        <button onclick="login()">Login</button>
+        <button>Register</button>
+     </div>
+  
+   </form>
+   <script>
+        function login(){
+            event.preventDefault();
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+            // console.log("userName",userName);
+            // console.log("password",password);
+            if(userName == undefined || userName == "" ){
+
+                // Cách 1:
+                // Ghi dữ liệu vào thẻ HTML với id là errorName
+                // document.getElementById("errorName").innerHTML = "Vui lòng không bỏ trống User Name"
+                // Thêm css vào thẻ HTML với id là errorName
+                // document.getElementById("errorName").className = "cl-red"
+                // Cách 2:
+                document.getElementById("errorName").className = "cl-red"
+            }
+            if(password == undefined || password == "" ){
+                // Cách 3
+                var error = document.getElementById("errorPassword")
+                error.innerHTML = "Vui lòng không bỏ trống Password"
+                error.style = "color : red"                
+            }
+
+        }
+   </script>
+</body>
+</html>

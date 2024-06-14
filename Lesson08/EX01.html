@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        // Khai báo với từ khoá new
+  
+            var arr = new Array();
+            var  arr1 = new Array(1,2,3);
+            // Khai báo với ngoặc vuông
+            var arr3 =[];
+            var arr4 = [1,2,"4","dnfj"];
+                
+            // Mảng hai chiều
+            // systax: var tên_biến = [số_phần_tử][số_phần_tử]
+            // vd: var arr= [1,2,3]
+            // vd: var arr = [2][3] => [giá_trị_1,giá_trị_2,giá_trị_3]
+            //                         [giá_trị_4,giá_trị_5,giá_trị_6]
+            // var arrHaiChieu = [2][3];
+          
+
+            // Xử lý với mảng
+         
+            for(let i= 0 ; i < arr4.length ; i++){
+                // alert("sss")
+                // console.log(i)
+                // console.log(arr4[i])
+                document.write("<div>Giá trị thứ ",i," là ",arr4[i] ,"</div>")
+            }
+            // Nối chuỗi bằng dấu phẩy
+            document.write("<div>",arr4.valueOf(),"</div>");
+            // Thêm một phần tử vào cuối cùng mảng
+            arr4.push("Devmaster")
+            document.writeln("<div> Thêm một phần tử vào cuối cùng mảng </div>")
+            document.writeln("<div>",arr4.valueOf(),"</div>")
+              // Xoá 1 phần tử cuối cùng của mảng 
+              arr4.pop();
+              document.writeln("<div> Xoá 1 phần tử cuối cùng của mảng  </div>")
+            document.writeln("<div>",arr4.valueOf(),"</div>")
+
+             // Thêm một phần tử vào đầu của mảng
+             arr4.unshift("Devmaster")
+             document.writeln("<div> Thêm một phần tử vào đầu của mảng </div>")
+            document.writeln("<div>",arr4.valueOf(),"</div>")
+              // Xoá 1 phần tử phần đầu của mảng
+              arr4.shift();
+              document.writeln("<div> Xoá 1 phần tử phần đầu của mảng </div>")
+            document.writeln("<div>",arr4.valueOf(),"</div>")
+
+
+            //  Sắp xếp mảng
+            var arr5 = ["học","tại", "dev","25 nguyễn ngọc vũ"];
+            // document.writeln("<div> Sắp xếp phần tử mảng theo chiều thuận: " , arr5.sort() ,"</div>")
+
+            // var arr5 = ["học","tại", "dev","25 nguyễn ngọc vũ"];
+            // document.writeln("<div> Sắp xếp phần tử mảng theo chiều ngược: " , arr5.reverse() ,"</div>")
+            // Nối chuỗi
+            var arr6 = ["Cầu Giấy","Hà Nội"];
+            var arrConcat =arr5.concat(arr6);
+            document.writeln("<div> Nối chuỗi: " , arrConcat.valueOf() ,"</div>")
+
+            // Cắt chuỗi
+            document.writeln("<div> Cắt chuỗi lấy từ vị trí 2 đến vị trí 5: " , arrConcat.slice(1,5) ,"</div>")
+        </script>
+    </body>
+</html>
