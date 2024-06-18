@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Phân trang với jquery</title>
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .w-100{
+            width: 100%;
+        }
+        .box-imgs{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .box-img{
+            width: 30%;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+        ul li{
+            border: solid 1px #ccc;
+            margin-left: 0.5rem;
+            margin-top: 2rem;
+            padding: 0 0.5rem;
+        }
+    </style>
+    </head>
+    <body>
+        <section class="box-imgs" id="list-sp">
+
+        </section>
+        <ul>
+            <li><</li>
+            <li value="1">1</li>
+            <li value="2">2</li>
+            <li value="3">3</li>
+            <li>></li>
+        </ul>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+        var listSp = [
+            {
+                id: "SP01",
+                name: "Sản phẩm 1",
+                img: "imgs/anh-phong-canh-dep-22.jpg",
+            },
+            {
+                id: "SP02",
+                name: "Sản phẩm 2",
+                img: "imgs/anh-phong-canh-dep-36.jpg",
+            },
+            {
+                id: "SP03",
+                name: "Sản phẩm 3",
+                img: "imgs/anh-phong-canh-dep-41.jpg",
+            },
+            {
+                id: "SP04",
+                name: "Sản phẩm 4",
+                img: "imgs/anh-phong-canh-dep-22.jpg",
+            },
+            {
+                id: "SP05",
+                name: "Sản phẩm 5",
+                img: "imgs/anh-phong-canh-dep-22.jpg",
+            },
+            {
+                id: "SP06",
+                name: "Sản phẩm 6",
+                img: "imgs/anh-phong-canh-dep-22.jpg",
+            },
+            {
+                id: "SP07",
+                name: "Sản phẩm 7",
+                img: "imgs/anh-phong-canh-dep-22.jpg",
+            },
+            {
+                id: "SP08",
+                name: "Sản phẩm 8",
+                img: "imgs/anh-phong-canh-dep-22.jpg",
+            },
+            {
+                id: "SP09",
+                name: "Sản phẩm 9",
+                img: "imgs/anh-phong-canh-dep-22.jpg",
+            },
+        ]
+        var setPage ={
+            countPage: 4,
+            page : 1,
+            soluongPage: 0
+        }
+        function LoadPage(){
+            setPage.soluongPage = Math.round(listSp.length/setPage.countPage +0.5);
+            $("#list-sp").text("")
+            let minPage = (setPage.page-1) * setPage.countPage;            
+            let maxPage = setPage.page * setPage.countPage;
+            for(let i =0; i< listSp.length;i++){
+                if(i >=minPage && i<maxPage){
+                    var str =`<div class="box-img">
+                            <img class="w-100" src="`+listSp[i].img+`" alt="">
+                        </div>`;
+                        $("#list-sp").append(str);
+                }
+            }
+        }
+
+        $(document).ready(function (){
+            LoadPage();                   
+        })
+        
+        $("li").click(function (event){
+           
+           setPage.page =$(this).val();           
+           LoadPage();
+        })
+
+        
+
+   </script>
+    </body>
+</html>

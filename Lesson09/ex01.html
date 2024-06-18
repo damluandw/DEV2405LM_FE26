@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jquery</title>
+        <style>
+            /* .errorPas,.errorUser{
+                display: none;
+            }
+            .active{
+                display: block !important;
+            } */
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <!-- Header -->
+        <!-- section -->
+        <form action>
+            <div>
+                <label for="userName">User Name</label>
+                <input type="text" name="userName" id="userName">
+                <div class="errorUser">Vui lòng không để trống userName</div>
+            </div>
+            <div>
+                <label for="password">password</label>
+                <input type="password" name="password" id="password">
+                <div class="errorPas">Vui lòng không để trống password</div>
+            </div>
+            <button>Đăng nhập</button>
+        </form>
+        <!-- section -->
+        <!-- Footer -->
+        <!-- Footer -->
+
+        <!-- Gắn thư viện jquery -->
+        <!-- Cách 1 -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <!-- Cách 1 -->
+        <!-- Cách 2 -->
+        <!-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+        <!-- Cách 2 -->
+        <!-- Gắn thư viện jquery -->
+        <script>
+        //   Systax => $(selector).event(khối lệnh)
+            $(".errorUser").hide();
+            $(".errorPas").hide();
+            $("button").click(function(event){
+                // không chuyển trang
+                event.preventDefault();
+                // lấy value của thẻ HTML có id là userName
+                var userName = $("#userName").val();
+                  // lấy value của thẻ HTML có id là password
+                var password = $("#password").val();
+                if(userName== null || userName == ""){
+                    // thêm class
+                    // $(".errorUser").addClass("active");
+                    //  style cho  các thẻ chứ class errorUser
+                    // $(".errorUser").css("color","red")
+                    // sử dụng hiệu ứng trong jquery
+                    $(".errorUser").show();
+                  
+                }else{
+                    $(".errorUser").hide();
+                }
+                if(password== null || password == ""){
+                    // sử dụng hiệu ứng trong jquery
+                    $(".errorPas").show();
+                }
+                else{
+                    $(".errorPas").hide();
+                }
+            });
+         </script>
+    </body>
+</html>

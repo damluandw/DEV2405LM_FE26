@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab2</title>
+        <style>
+            .change-cl{
+                border:  1px solid #000;
+                margin-right: 0.5rem;
+            }
+          
+        </style>
+    </head>
+    <body>
+        <section>
+            <h2>Vui lòng chọn màu</h2>
+            <div>
+                <span class="change-cl" id="cl-red">Đỏ</span>
+                <span class="change-cl" id="cl-blue">Xanh da trời</span>
+                <span class="change-cl" id="cl-green">Xanh lá cây</span>
+                <span class="change-cl" id="cl-yellow">Vàng</span>
+                <span class="change-cl" id="cl-violet">Tím</span>
+            </div>
+            <div>
+                <h3>Học lập trình tại Devmaster</h3>
+            </div>
+        </section>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script>
+             $(document).ready(function(){
+                alert("Bài học lab01")
+             })
+        </script> -->
+        <script>
+            // Cách 1
+            // $(".change-cl").click(function (event){
+            //     var cl = event.target.id
+            //     console.log(cl);
+            //     switch(cl){
+            //         case "cl-red":
+            //             $("h3").css("color","red");
+            //             break;
+            //         case "cl-blue":
+            //             $("h3").css("color","blue");
+            //             break;
+            //         case "cl-green":
+            //             $("h3").css("color","green");
+            //             break;
+            //         case "cl-yellow":
+            //             $("h3").css("color","yellow");
+            //             break;
+            //         case "cl-violet":
+            //             $("h3").css("color","violet");
+            //             break;
+            //     }                
+            // })
+              // Cách 2
+              $(".change-cl").click(function (event){
+                var cl = event.target.id;
+                var color = cl.substring(3,cl.length);
+                $("h3").css("color",color);              
+            })
+        </script>
+    </body>
+</html>

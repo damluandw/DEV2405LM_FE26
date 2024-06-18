@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng chuyển ảnh</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .w-100{
+            width: 100%;
+        }
+        .img-1{
+            width: 65%;
+            margin: auto;
+        }
+        .box-imgs{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .img-2{
+            width: 15%;
+            
+        }
+        .active{
+            border: red 1px solid;
+
+        }
+
+    </style>
+<body>
+    <section>
+        <div class="img-1">
+            <img id="img-main" class="w-100" src="imgs/anh-phong-canh-dep-22.jpg" alt="anh-phong-canh-dep-22">
+        </div>
+        <div class="box-imgs">
+            <div class="img-2 active">
+                <img class="w-100" src="imgs/anh-phong-canh-dep-22.jpg" alt="anh-phong-canh-dep-22">
+            </div>
+            <div class="img-2">
+                <img class="w-100" src="imgs/anh-phong-canh-dep-36.jpg" alt="anh-phong-canh-dep-36">
+                <div class="img-3">
+
+                </div>
+            </div>
+            <div class="img-2">
+                <img class="w-100" src="imgs/anh-phong-canh-dep-41.jpg" alt="anh-phong-canh-dep-41">
+            </div>
+            <div class="img-2">
+                <img class="w-100" src="imgs/cach-chup-anh-phong-canh-dep-15.jpg" alt="cach-chup-anh-phong-canh-dep-15">
+            </div>
+            <div class="img-2">
+                <img class="w-100" src="imgs/landscape-photography_1645.jpg" alt="landscape-photography_1645">
+            </div>
+            <div class="img-2">
+                <img class="w-100" src="imgs/istockphoto-517188688-612x612.jpg" alt="istockphoto-517188688-612x612">
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(".img-2").click(function (event){
+            var src =  $(this).children().attr("src");
+            // console.log(src);
+            $("#img-main").attr("src", src);
+            $(".img-2").removeClass("active");
+            $(this).addClass("active");
+        })
+
+        // children("selector") =>  lấy khối được bao bên trong (thẻ con) của thẻ đang trỏ
+        // parent() =>  lấy khối được bao bên ngoài (thẻ cha) của thẻ đang trỏ
+        // sibling("selector") => lấy khối bên cạnh (thẻ cùng cấp) của đang trỏ
+    </script>
+</body>
+</html>
