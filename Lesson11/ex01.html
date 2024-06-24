@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Card</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous">
+        <style>
+            .w-5{
+                width: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- HTML -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Ảnh sản phẩm</th>
+                    <th scope="col">Giá tiền</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Thành tiền</th>
+                    <th scope="col">Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody id="listCard">
+                <!-- <tr>
+                    <th scope="row">1</th>
+                    <td><img src="" alt=""></td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td><span onclick = "MinusCard('gggg')"><i class="fa-solid fa-minus" ></i></span> <span class= "quantity">`+obj.quatity+`</span><span><i class="fa-solid fa-plus"></i></span></td>
+                    <td>@mdo</td>
+                </tr> -->
+            </tbody>
+        </table>
+        <!-- HTML -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+        <script>
+            // biên toàn cục
+            var listCard1 = [
+                {
+                    id: 'SP001',
+                    name: 'Sản Phẩm 1',
+                    image: 'imgs/sp01.jpg',
+                    price: 80000,
+                    quatity: 1,
+                    limit: 9
+                },
+                {
+                    id: 'SP002',
+                    name: 'Sản Phẩm 2',
+                    image: 'imgs/sp02.webp',
+                    price: 70000,
+                    quatity: 1,
+                    limit: 4
+                },
+                {
+                    id: 'SP003',
+                    name: 'Sản Phẩm 3',
+                    image: 'imgs/sp03.webp',
+                    price: 60000,
+                    quatity: 3,
+                    limit: 5
+                }
+            ];
+            // localStorage, sessionStorage, Cookie
+            function setCard(list){
+                localStorage.removeItem("listCard");
+                localStorage.setItem("listCard", JSON.stringify(list));  
+            }
+            var listCard;
+            function getCard(){                
+                listCard =  JSON.parse(localStorage.getItem("listCard"));  
+            } 
+            
+            // setCard(listCard1);
+            getCard();
+
+            function renderCard(i,obj){
+                return `<tr>
+                <th scope="row">`+i+`</th>
+                <td>`+obj.name+`</td>
+                <td class= "w-5"><img class= "w-100" src="`+obj.image+`" alt=""></td>
+                <td>`+obj.price+`</td>
+                <td class= "quantity" data-id = "`+obj.id+`"><span onclick = "MinusCard('`+obj.id+`')"><i class="fa-solid fa-minus" ></i></span> <span class="quantity-value">`+obj.quatity+`</span><span><i class="fa-solid fa-plus"></i></span></td>
+                <td>`+obj.price * obj.quatity+`</td>
+                <td><span><i class="fa-solid fa-trash"></i></span></td>
+              </tr> `
+            }
+
+            function renderCards(){
+               
+                for(let i=0; i< listCard.length ; i++){                  
+                    $("#listCard").append(renderCard(i+1,listCard[i]));
+                }
+               
+            }
+            renderCards();
+            // Cách 1
+            function MinusCard(id){
+                for(let i=0; i< listCard.length ; i++){                   
+                    if(listCard[i].id == id){
+                       
+                        let quatity =  listCard[i].quatity;                    
+                        if(quatity <= 1){
+                            listCard[i].quatity =1; 
+                        }else{                         
+                            listCard[i].quatity--;
+                            $("#listCard").empty();
+                            renderCards();
+                        }
+                    }                    
+                }
+                setCard(listCard);
+                getCard();
+            }
+
+            // Cách 2
+            $(".fa-solid.fa-plus").on("click", function Plus(evt){
+                // $(this) -> thẻ được trỏ và bắt sự kiện click ở đây là thẻ có class ".fa-solid.fa-plus"
+                // parent() -> span
+                // parent(".quantity") -> trỏ đến thẻ cha có class là quantity
+                // attr("data-id") lấy thuộc tính data-id của thẻ
+                var id =   $(this).parent().parent(".quantity").attr("data-id");
+                for(let i=0; i< listCard.length ; i++){                   
+                    if(listCard[i].id == id){                        
+                        let quatity =  listCard[i].quatity;                    
+                        if(quatity >= listCard[i].limit){
+                            listCard[i].quatity = listCard[i].limit; 
+                        }else{                         
+                            listCard[i].quatity++;
+                            // console.log($(this).parent().siblings("quantity-value"));
+                            $(this).parent().siblings(".quantity-value").html(listCard[i].quatity);
+                        }
+                    }                  
+                }
+                setCard(listCard);
+                getCard();
+            })
+            $(".fa-solid.fa-trash").on("click", function Trash(evt){
+                var id =   $(this).parent().parent().siblings(".quantity").attr("data-id");
+                for(let i=0; i< listCard.length ; i++){                   
+                    if(listCard[i].id == id){
+                        var obj = listCard[i]
+                        listCard = listCard.filter(item => item !== obj)
+                        $(this).parent().parent().parent().remove();                        
+                    }                  
+                }
+                setCard(listCard);
+                getCard();
+            }
+            )
+
+           
+        </script>
+    </body>
+</html>

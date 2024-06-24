@@ -1,0 +1,32 @@
+1. HTML (Khung của 1 trang web)
+    - Thẻ HTML
+    - Phân bố cục
+2. CSS (Công cụ làm đẹp)
+    - Bộ chọn trong trong CSS tương tác với thẻ HTML
+        + Id
+        + class
+        + thẻ HTML
+        + tương tác qua thuộc tính của thẻ (thường sử dụng với thẻ input)
+    - Độ ưu tiên trong CSS
+        -- Theo bộ chọn
+            + !important
+            + Id
+            + tương tác qua thuộc tính của thẻ (thường sử dụng với thẻ input)
+            + class
+            + thẻ HTML
+        -- Bộ chọn càng chi tiết thì độ ưu tiên càng cao 
+           + EX: .class1.class2 sẽ được ưu tiên hơn .class1
+        -- Theo thức tự CSS
+            + thuộc tính CSS sẽ được lấy theo thuộc tính css cuối cùng
+3. Javascript (tương tác làm sinh động hơn trang web )
+    - Khai báo biến, mảng, object,.... (biến toàn cục và biến cục bộ)
+    - Cấu trúc điều khiển
+    - Vòng lặp
+    - Function
+    - DOM/Jquery - tương tác với thẻ HTML và xử lý CSS
+4. Boostrap (công cụ cho các bạn css nhanh hơn)
+    - Thư viện giúp css nhanh hơn
+5. Một số thư viện khác
+    - fontawesome (thư viện các icon)
+    - regular expression (bắt lỗi ký tự theo yêu cầu)
+    - slick (thư viện để chuyển slider ảnh)
