@@ -82,17 +82,41 @@ header {
     /* #header-menu {
         display: none !important;
     } */
-    body{
+    #header-nav .fa-solid.fa-bars {
+        display: block;
+      
+    }
+    /* body{
         position: relative;
+    } */
+    #header-nav  {
+        position: relative;
+        /* top: 100%; */
+        left: 0;
+        display: block;
+        width: 100%;
     }
     #header-menu li{
-        width: 100%;
+        text-align: center;
+        margin-left: 0 !important;
     }
     #header-menu{
         position: absolute;
-        top: 20%;
-        left: 50%;
+        top: 0;
+        left: 0;
+        /* transform: translate(0, 0%); */
         display: block !important;
+        width: 100%;
+        height: 100vh !important;
+        justify-content: center;
+        /* margin: auto; */
+        /* background-color: chartreuse; */
     }
+    #header-nav ul li:hover ::before {
+        width: 10%;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
    
 }   
