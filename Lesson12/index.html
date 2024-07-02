@@ -1,53 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ xưởng mộc</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/layout.css">
-</head>
-<body>
-    <!-- form, notify,slick -->
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="d-flex justify-content-between">
-                <div class="header-logo">
-                    <img class="w-100" src="/logo/logo.png" alt="logo">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang chủ xưởng mộc</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <link href="
+            https://cdn.jsdelivr.net/npm/slick-carousel@1.9.0/slick/slick.min.css
+            " rel="stylesheet">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <!-- form, notify,slick -->
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="d-flex justify-content-between">
+                    <div class="header-logo">
+                        <img class="w-100" src="logo/logo.png" alt="logo">
+                    </div>
+
+                    <nav id="header-nav">
+                        <div class="nav-icon">
+                            <span><i class="fa-solid fa-bars"></i></span>
+                        </div>
+                        <ul id="header-menu">
+                            <li>
+                                <a href="index.html">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="gioithieu.html">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a href="#">Sản phẩm</a>
+                            </li>
+                            <li>
+                                <a href="#">Tin tức</a>
+                            </li>
+                            <li>
+                                <a href="#">Đối tác</a>
+                            </li>
+                            <li>
+                                <a href="#">liên hệ</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-               
-                <nav id="header-nav" > 
-                    <div class="nav-icon">
-                        <span><i class="fa-solid fa-bars"></i></span>  
-                    </div>               
-                    <ul id="header-menu" class="d-flex justify-content-between align-items-center h-100">
-                        <li>
-                            <a href="index.html">Trang chủ</a>
-                        </li>
-                        <li>
-                            <a href="gioithieu.html">Giới thiệu</a>
-                        </li>
-                        <li>
-                            <a href="#">Sản phẩm</a>
-                        </li>
-                        <li>
-                            <a href="#">Tin tức</a>
-                        </li>
-                        <li>
-                            <a href="#">Đối tác</a>
-                        </li>
-                        <li>
-                            <a href="#">liên hệ</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
-        </div>
-    </header>
-     <!-- Header -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
+        </header>
+        <!-- Header -->
+
+        <!-- List sản phẩm sử dụng slick -->
+        <section class="container">
+            <!-- <h2>Sản phẩm nổi bật</h2> -->
+            <div id="list-product" class="row">
+                <div class="box-product col-3">
+                    <div>
+                        <div class="img">
+                            <img class="w-100" src="imgs/sp-1.jpg" alt="sp-1">
+                        </div>
+                        <div>
+                            <h3 class="product-title">Giường châu âu</h3>
+                            <div class="icon-star">
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="product-size">
+                                (Size lớn, trắng sữa)
+                            </div>
+                            <div class="product-price">
+                                8.999.000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-product col-3">
+                    <div>
+                        <div class="img">
+                            <img class="w-100" src="imgs/sp-2.jpg" alt="sp-1">
+                        </div>
+                        <div>
+                            <h3 class="product-title">Giường châu âu</h3>
+                            <div class="icon-star">
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="product-size">
+                                (Size lớn, trắng sữa)
+                            </div>
+                            <div class="product-price">
+                                8.999.000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-product col-3">
+                    <div>
+                        <div class="img">
+                            <img class="w-100" src="imgs/sp-1.jpg" alt="sp-1">
+                        </div>
+                        <div>
+                            <h3 class="product-title">Giường châu âu</h3>
+                            <div class="icon-star">
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="product-size">
+                                (Size lớn, trắng sữa)
+                            </div>
+                            <div class="product-price">
+                                8.999.000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-product col-3">
+                    <div>
+                        <div class="img">
+                            <img class="w-100" src="imgs/sp-1.jpg" alt="sp-1">
+                        </div>
+                        <div>
+                            <h3 class="product-title">Giường châu âu</h3>
+                            <div class="icon-star">
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="product-size">
+                                (Size lớn, trắng sữa)
+                            </div>
+                            <div class="product-price">
+                                8.999.000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-product col-3">
+                    <div>
+                        <div class="img">
+                            <img class="w-100" src="imgs/sp-2.jpg" alt="sp-2">
+                        </div>
+                        <div>
+                            <h3 class="product-title">Giường châu âu</h3>
+                            <div class="icon-star">
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="product-size">
+                                (Size lớn, trắng sữa)
+                            </div>
+                            <div class="product-price">
+                                8.999.000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-product col-3">
+                    <div>
+                        <div class="img">
+                            <img class="w-100" src="imgs/sp-1.jpg" alt="sp-1">
+                        </div>
+                        <div>
+                            <h3 class="product-title">Giường châu âu</h3>
+                            <div class="icon-star">
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="product-size">
+                                (Size lớn, trắng sữa)
+                            </div>
+                            <div class="product-price">
+                                8.999.000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-product col-3">
+                    <div>
+                        <div class="img">
+                            <img class="w-100" src="imgs/sp-1.jpg" alt="sp-1">
+                        </div>
+                        <div>
+                            <h3 class="product-title">Giường châu âu</h3>
+                            <div class="icon-star">
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="product-size">
+                                (Size lớn, trắng sữa)
+                            </div>
+                            <div class="product-price">
+                                8.999.000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-product col-3">
+                    <div>
+                        <div class="img">
+                            <img class="w-100" src="imgs/sp-2.jpg" alt="sp-2">
+                        </div>
+                        <div>
+                            <h3 class="product-title">Giường châu âu</h3>
+                            <div class="icon-star">
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="product-size">
+                                (Size lớn, trắng sữa)
+                            </div>
+                            <div class="product-price">
+                                8.999.000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- List sản phẩm sử dụng slick -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+            integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/layout.js"></script>
+        <script src="js/index.js"></script>
+    </body>
 </html>
